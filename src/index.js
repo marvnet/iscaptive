@@ -4,3 +4,8 @@ const fetch = require("node-fetch")
 const captives = {
     "marvnet": "detectcaptive.marvnet.digital",
 }
+
+// define detection algorithms for detection pages
+const detectMarvnet = () => {
+    
+}
