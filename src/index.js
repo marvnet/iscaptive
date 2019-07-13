@@ -6,6 +6,9 @@ const captives = {
 }
 
 // define detection algorithms for detection pages
-const detectMarvnet = () => {
-    
+const detectMarvnet = (protocol) => {
+    fetch(protocol + "://" + captives.marvnet)
+        .then((response) => {
+            
+        })
 }
