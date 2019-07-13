@@ -8,5 +8,8 @@
   "private": false,
   "dependencies": {
     "node-fetch": "2.6.0"
+  },
+  "scripts": {
+    "test": "node src/test/test.js"
   }
 }
