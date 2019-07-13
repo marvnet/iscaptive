@@ -5,5 +5,8 @@
   "repository": "https://github.com/marvnet/iscaptive",
   "author": "MarvNet Digital UG (haftungsbeschraenkt) <oss@marvnet.digital>",
   "license": "GPL-3.0-or-later",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "node-fetch": "2.6.0"
+  }
 }
