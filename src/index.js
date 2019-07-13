@@ -7,5 +7,5 @@ const captives = {
 
 // define detection algorithms for detection pages
 const detectMarvnet = () => {
-
+    
 }
