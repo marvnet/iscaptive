@@ -1,0 +1,9 @@
+{
+  "name": "iscaptive",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/marvnet/iscaptive",
+  "author": "MarvNet Digital UG (haftungsbeschraenkt) <oss@marvnet.digital>",
+  "license": "GPL-3.0-or-later",
+  "private": false
+}
