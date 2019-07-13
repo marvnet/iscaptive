@@ -9,6 +9,13 @@ const captives = {
 const detectMarvnet = (protocol) => {
     fetch(protocol + "://" + captives.marvnet)
         .then((response) => {
-
+            return response.text()
+        })
+        .then((text) => {
+            if(text == "Success") {
+                return false
+            } else {
+                return true
+            }
         })
 }
