@@ -19,3 +19,15 @@ const detectMarvnet = (protocol) => {
             }
         })
 }
+
+module.exports = (server, protocol) => {
+    let server = typeof server  !== 'undefined' ?  server  : "marvnet"
+    let protocol = typeof protocol !== 'undefined' ? protocol : "https"
+    switch(server) {
+        case "marvnet":
+            return detectMarvnet(protocol)
+
+        default:
+            return false
+    }
+}
