@@ -1,3 +1,6 @@
 const isCaptive = require("./../index")
 
-console.log(isCaptive())
+isCaptive()
+    .then((captive) => {
+        console.log(captive)
+    })
