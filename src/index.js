@@ -11,10 +11,18 @@ module.exports = (server, protocol) => {
     switch(server) {
         case "marvnet":
             request(protocol + "://" + captives[server], (error, response, body) => {
-                if(body == "Success") {
-                    return false
-                } else {
+                if(error) {
                     return true
+                } else {
+                    if(response.statusCode == 200) {
+                        if(body == "Success") {
+                            return false
+                        } else {
+                            return true
+                        }
+                    } else {
+                        return true
+                    }
                 }
             })
 
