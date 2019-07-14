@@ -11,5 +11,8 @@
   },
   "scripts": {
     "test": "node src/test/test.js"
+  },
+  "bin": {
+    "iscaptive": "./src/cli.js"
   }
 }
