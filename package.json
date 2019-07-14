@@ -6,7 +6,9 @@
   "author": "MarvNet Digital UG (haftungsbeschraenkt) <oss@marvnet.digital>",
   "license": "GPL-3.0-or-later",
   "private": false,
-  "dependencies": {},
+  "dependencies": {
+    "request": "2.88.0"
+  },
   "scripts": {
     "test": "node src/test/test.js"
   }
