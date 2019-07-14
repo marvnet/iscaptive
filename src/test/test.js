@@ -1,3 +1,3 @@
 const isCaptive = require("./../index")
 
-console.log(isCaptive("marvnet"))
+console.log(isCaptive())
