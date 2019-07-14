@@ -6,8 +6,8 @@ const captives = {
 }
 
 // define detection algorithms for detection pages
-const detectMarvnet = (protocol) => {
-    fetch(protocol + "://" + captives.marvnet)
+async function detectMarvnet(protocol) {
+    return await fetch(protocol + "://" + captives.marvnet)
         .then((response) => {
             return response.text()
         })
@@ -20,12 +20,12 @@ const detectMarvnet = (protocol) => {
         })
 }
 
-module.exports = (server, protocol) => {
+module.exports = async (server, protocol) => {
     server = typeof server  !== 'undefined' ?  server  : "marvnet"
     protocol = typeof protocol !== 'undefined' ? protocol : "https"
     switch(server) {
         case "marvnet":
-            return detectMarvnet(protocol)
+            return await detectMarvnet(protocol)
 
         default:
             return false
