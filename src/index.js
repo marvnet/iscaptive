@@ -1,4 +1,4 @@
-
+const request = require("request")
 // define possible captive detection server
 const captives = {
     marvnet: "iscaptive.marvnet.digital",
