@@ -5,17 +5,18 @@ const captives = {
     marvnet: "iscaptive.marvnet.digital",
 }
 
-// define detection algorithms for detection pages
-function detectMarvnet(protocol) {
-    return true
-}
-
-module.exports = async (server, protocol) => {
+module.exports = (server, protocol) => {
     server = typeof server  !== 'undefined' ?  server  : "marvnet"
     protocol = typeof protocol !== 'undefined' ? protocol : "https"
     switch(server) {
         case "marvnet":
-            return detectMarvnet(protocol)
+            request(protocol + "://" + captives[server], (error, response, body) => {
+                if(body == "Success") {
+                    return false
+                } else {
+                    return true
+                }
+            })
 
         default:
             return false
